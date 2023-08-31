@@ -22,10 +22,13 @@ public class WinManeger {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel p1count;
+    private javax.swing.JLabel p2count;
     private String player;
     
+    
 
-    public WinManeger(JButton jButton1, JButton jButton2, JButton jButton3, JButton jButton4, JButton jButton5, JButton jButton6, JButton jButton7, JButton jButton8, JButton jButton9,JLabel jLabel2,String player) {
+    public WinManeger(JButton jButton1, JButton jButton2, JButton jButton3, JButton jButton4, JButton jButton5, JButton jButton6, JButton jButton7, JButton jButton8, JButton jButton9,JLabel jLabel2,String player,JLabel p1count,JLabel p2count) {
         this.jButton1 = jButton1;
         this.jButton2 = jButton2;
         this.jButton3 = jButton3;
@@ -37,6 +40,9 @@ public class WinManeger {
         this.jButton9 = jButton9;
         this.jLabel2 = jLabel2;
         this.player = player;
+        this.p1count = p1count;
+        this.p2count = p2count;
+        
     }
 
     public JButton getjButton1() {
@@ -128,7 +134,7 @@ public class WinManeger {
     }
     
     
-    public void checkForWins(){
+    public void checkForWins(int countP1w, int countP2w){
         String btn1txt = jButton1.getText();
         String btn2txt= jButton2.getText();
         String btn3txt= jButton3.getText();
@@ -143,67 +149,102 @@ public class WinManeger {
         if(btn1txt == btn2txt && btn1txt == btn3txt && btn1txt != "-"){
             if(player == "player1"){
                 jLabel2.setText("PLAYER 2 WON");
+                countP2w++;
+                p2count.setText(Integer.toString(countP2w));
             }else{
                 jLabel2.setText("PLAYER 1 WON");
+                countP1w++;
+                p1count.setText(Integer.toString(countP1w));
             }
             disableBttns();
         }
         else if(btn1txt == btn4txt && btn1txt == btn7txt && btn1txt != "-"){
             if(player == "player1"){
                 jLabel2.setText("PLAYER 2 WON");
+                countP2w++;
+                p2count.setText(Integer.toString(countP2w));
             }else{
                 jLabel2.setText("PLAYER 1 WON");
+                countP1w++;
+                p1count.setText(Integer.toString(countP1w));
             }
             disableBttns();
         }
         else if(btn1txt == btn5txt && btn1txt == btn9txt && btn1txt != "-"){
             if(player == "player1"){
                 jLabel2.setText("PLAYER 2 WON");
+                countP2w++;
+                p2count.setText(Integer.toString(countP2w));
             }else{
                 jLabel2.setText("PLAYER 1 WON");
+                countP1w++;
+                p1count.setText(Integer.toString(countP1w));
             }
             disableBttns();
         }
         else if(btn4txt == btn5txt && btn4txt == btn6txt && btn4txt != "-"){
             if(player == "player1"){
                 jLabel2.setText("PLAYER 2 WON");
+                countP2w++;
+                p2count.setText(Integer.toString(countP2w));
             }else{
                 jLabel2.setText("PLAYER 1 WON");
+                countP1w++;
+                p1count.setText(Integer.toString(countP1w));
             }
             disableBttns();
         }
         else if(btn7txt == btn8txt && btn7txt == btn9txt && btn7txt != "-"){
             if(player == "player1"){
                 jLabel2.setText("PLAYER 2 WON");
+                countP2w++;
+                p2count.setText(Integer.toString(countP2w));
             }else{
                 jLabel2.setText("PLAYER 1 WON");
+                countP1w++;
+                p1count.setText(Integer.toString(countP1w));
             }
             disableBttns();
         }
         else if(btn2txt == btn5txt && btn2txt == btn8txt && btn2txt != "-"){
             if(player == "player1"){
                 jLabel2.setText("PLAYER 2 WON");
+                countP2w++;
+                p2count.setText(Integer.toString(countP2w));
             }else{
                 jLabel2.setText("PLAYER 1 WON");
+                countP1w++;
+                p1count.setText(Integer.toString(countP1w));
             }
             disableBttns();
         }
         else if(btn3txt == btn6txt && btn3txt == btn9txt && btn3txt != "-"){
             if(player == "player1"){
                 jLabel2.setText("PLAYER 2 WON");
+                countP2w++;
+                p2count.setText(Integer.toString(countP2w));
             }else{
                 jLabel2.setText("PLAYER 1 WON");
+                countP1w++;
+                p1count.setText(Integer.toString(countP1w));
             }
             disableBttns();
         }
         else{
             if(player == "player1"){
                 jLabel2.setText("PLAYER 1 's turn");
+                p1count.setText(Integer.toString(countP1w));
+                p2count.setText(Integer.toString(countP2w));
             }else{
                 jLabel2.setText("PLAYER 2 's turn");
+                p1count.setText(Integer.toString(countP1w));
+                p2count.setText(Integer.toString(countP2w));
             }
         }
     }
+
+    
+    
     public void disableBttns(){
         jButton1.setEnabled(false);
         jButton2.setEnabled(false);
