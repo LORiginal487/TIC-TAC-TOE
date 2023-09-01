@@ -4,18 +4,21 @@
  */
 package tttGame;
 
+import javax.swing.JButton;
+
 /**
  *
  * @author User
  */
 public class ticTacToeGUI extends javax.swing.JFrame {
+
     String player = "player1";
     playerManeger pm = new playerManeger(player);
     WinManeger wm;
     PlayAgain pa;
+    playWithComp pwc;
     int player1w, player2w;
-    
-    
+
     /**
      * Creates new form ticTacToeGUI
      */
@@ -130,6 +133,11 @@ public class ticTacToeGUI extends javax.swing.JFrame {
         });
 
         playWcmp.setText("1 PLAYER");
+        playWcmp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                playWcmpActionPerformed(evt);
+            }
+        });
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("PLAYER 1 WINS");
@@ -245,76 +253,84 @@ public class ticTacToeGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        pm.changeButtonTxt(jButton1);
-        
-        wm = new WinManeger(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, pm.getPlayer(),p1count,p2count);
-        wm.checkForWins(player1w, player2w);
-        
+        classCalling1(jButton1);
+        if (playWcmp.isSelected()) {
+            classCalling2();
+        }
+
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        pm.changeButtonTxt(jButton4);
-        wm = new WinManeger(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, pm.getPlayer(),p1count,p2count);
-        wm.checkForWins(player1w, player2w);
-        
+        classCalling1(jButton4);
+        if (playWcmp.isSelected()) {
+            classCalling2();
+        }
+
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        pm.changeButtonTxt(jButton7);
-        wm = new WinManeger(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, pm.getPlayer(),p1count,p2count);
-        wm.checkForWins(player1w, player2w);
-        
+        classCalling1(jButton7);
+        if (playWcmp.isSelected()) {
+            classCalling2();
+        }
+
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        pm.changeButtonTxt(jButton2);
-        wm = new WinManeger(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, pm.getPlayer(),p1count,p2count);
-        wm.checkForWins(player1w, player2w);
-        
+        classCalling1(jButton2);
+        if (playWcmp.isSelected()) {
+            classCalling2();
+        }
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        pm.changeButtonTxt(jButton5);
-        wm = new WinManeger(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, pm.getPlayer(),p1count,p2count);
-        wm.checkForWins(player1w, player2w);
-        
+        classCalling1(jButton5);
+        if (playWcmp.isSelected()) {
+            classCalling2();
+        }
+
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        pm.changeButtonTxt(jButton8);
-        wm = new WinManeger(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, pm.getPlayer(),p1count,p2count);
-        wm.checkForWins(player1w, player2w);
-        
+        classCalling1(jButton8);
+        if (playWcmp.isSelected()) {
+            classCalling2();
+        }
+
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        pm.changeButtonTxt(jButton3);
-        wm = new WinManeger(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, pm.getPlayer(),p1count,p2count);
-        wm.checkForWins(player1w, player2w);
-        
+        classCalling1(jButton3);
+        if (playWcmp.isSelected()) {
+            classCalling2();
+        }
+
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        pm.changeButtonTxt(jButton6);
-        wm = new WinManeger(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, pm.getPlayer(),p1count,p2count);
-        wm.checkForWins(player1w, player2w);
-        
+        classCalling1(jButton6);
+        if (playWcmp.isSelected()) {
+            classCalling2();
+        }
+
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-        pm.changeButtonTxt(jButton9);
-        wm = new WinManeger(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, pm.getPlayer(),p1count,p2count);
-        wm.checkForWins(player1w, player2w);
-        
-        
+        classCalling1(jButton9);
+        if (playWcmp.isSelected()) {
+            classCalling2();
+        }
+
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void playAgainBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playAgainBtnActionPerformed
@@ -322,13 +338,18 @@ public class ticTacToeGUI extends javax.swing.JFrame {
         pa = new PlayAgain(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, player);
         pa.restartGame();
         pm.setPlayer(pa.getPlayer());
-        wm = new WinManeger(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, pm.getPlayer(),p1count,p2count);
+        wm = new WinManeger(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, pm.getPlayer(), p1count, p2count, compCount);
 
         player1w = Integer.parseInt(p1count.getText());
-        
+
         player2w = Integer.parseInt(p2count.getText());
-        
+
     }//GEN-LAST:event_playAgainBtnActionPerformed
+
+    private void playWcmpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playWcmpActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_playWcmpActionPerformed
 
     /**
      * @param args the command line arguments
@@ -363,6 +384,22 @@ public class ticTacToeGUI extends javax.swing.JFrame {
                 new ticTacToeGUI().setVisible(true);
             }
         });
+    }
+
+    public void classCalling1(javax.swing.JButton btn) {
+        pm.changeButtonTxt(btn);
+        wm = new WinManeger(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, pm.getPlayer(), p1count, p2count, compCount);
+        wm.checkForWins(player1w, player2w, Integer.parseInt(compCount.getText()), "notSelected");
+    }
+
+    public void classCalling2() {
+        pwc = new playWithComp(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9);
+        JButton bttnRnd = pwc.randomButton();
+        if (bttnRnd != null) {
+            pm.changeButtonTxt(bttnRnd);
+            wm = new WinManeger(jButton1, jButton2, jButton3, jButton4, jButton5, jButton6, jButton7, jButton8, jButton9, jLabel2, "player1", p1count, p2count, compCount);
+            wm.checkForWins(player1w, player2w, Integer.parseInt(compCount.getText()), "selected");
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
